@@ -127,6 +127,6 @@ if submit_button:
 
     # Display result
     if predicted_attrition == 1:
-        st.success("The Employee is likely to leave the company.")
+        st.warning("The Employee is likely to leave the company.")
     else:
-        st.error("The Employee is likely to stay in the company.")
+        st.success("The Employee is likely to stay in the company.")
