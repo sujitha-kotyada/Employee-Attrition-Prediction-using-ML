@@ -1,83 +1,153 @@
-# Employee Attrittion prediction using Machine Learning
+# 👥 Employee Attrition Prediction using Machine Learning
 
-This project involves creating a user-friendly Streamlit application for predicting employee attrition using a pre-trained KNN model. The application gathers relevant employee information such as age, gender, department, job title, years at the company, satisfaction level, average monthly hours, promotion history, and salary through a well-designed form. The app preprocesses the input data, including label encoding for categorical variables and one-hot encoding for specific features. Upon submission, the app predicts whether an employee is likely to leave or stay at the company, displaying the results in aesthetically pleasing colored containers—green for high attrition risk and red for low attrition risk. The project emphasizes enhanced UI/UX, incorporating custom CSS for styling, centered bold headers, and a background pattern to ensure a visually appealing interface. The final product is a comprehensive, intuitive tool for HR departments to anticipate and address employee attrition effectively.
+A Streamlit web application for predicting employee attrition using a pre-trained KNN model. The app collects employee information through an interactive form and predicts whether an employee is likely to leave or stay at the company — helping HR departments proactively address retention.
 
+![Python](https://img.shields.io/badge/Python-3.9+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
 
-## Data Set
+---
 
-The dataset link is are as follows :-https://www.kaggle.com/datasets/mrsimple07/employee-attrition-data-prediction
+## ✨ Features
 
-on this dataset, below processing are performed :
-1) featue scaling and column reinitialization
-2) errors and outliers removal using box plot
-3) remove na,missing values , regularization etc
-4) Drop duplicates , normalization , column dropping
-5) Oversampling
+- **📊 Multiple ML Models Compared** — Naive Bayes, XGBoost, KNN, and Gradient Boosting Machine
+- **🏆 Best Model Selected** — KNN chosen for highest accuracy after comparison
+- **🖥️ Interactive Web App** — Streamlit-based form with sliders, dropdowns, and radio buttons
+- **📈 Comprehensive EDA** — Pie charts, violin plots, box plots, histograms, correlation matrices
+- **🎨 Custom Styled UI** — Enhanced styling with custom CSS, background patterns, and colored results
 
-(all this works ar depicted in employee_attrityion_prediction.ipynb file)
+---
 
+## 📋 Dataset
 
-## Methodology
+**Source**: [Employee Attrition Data](https://www.kaggle.com/datasets/mrsimple07/employee-attrition-data-prediction) on Kaggle
 
-The project follows the below structured methodology ranging from data preprocessing pipeline to feature engineering model training, evaluation and deployment :-
+| Feature | Description |
+|---------|-------------|
+| `Age` | Employee age (18–70) |
+| `Gender` | Male / Female |
+| `Department` | Marketing, Sales, Engineering, Finance, HR |
+| `Job_Title` | Manager, Engineer, Analyst, HR Specialist, Accountant |
+| `Years_at_Company` | Years of tenure (0–30) |
+| `Satisfaction_Level` | Employee satisfaction (0–100) |
+| `Average_Monthly_Hours` | Monthly hours worked (50–300) |
+| `Promotion_Last_5Years` | Whether promoted in last 5 years |
+| `Salary` | Annual salary |
 
-1. **Data Preprocessing and feature enginnering**
+### Data Preprocessing
 
-2. **Exploratory Data Analysis (EDA)**:
-    after Data preprocessing the next step is Exploratory  data analysis using different plotting libraries like matplotlib,pandas,seaborn and plotly.following plots were plotted in this step:-
-    1) Pie charts
-    2) violen plots
-    3) box plot of numerical features
-    4) count plots
-    5) histogram
-    6) model comparison graphs
-    7) confusion matrix
-    8) Correlation metrices
-    (refer images folder for this images and graph observation)
+1. Feature scaling and column reinitialization
+2. Outlier removal using box plots
+3. Missing values handling and regularization
+4. Duplicate removal and normalization
+5. Oversampling for class balance
 
+---
 
-4. **Model Training and evaluation**: 
-     The four machine learning model Naive Bayes ,XgBoost ,KNN, gradient boosting machine are selected for model training over the inputed processed data:
+## 🔍 Methodology
 
-     The most accurate KNN model is then loaded into streamlit application after installing and using joblib library.
+1. **Data Preprocessing & Feature Engineering** — Cleaning, encoding, scaling
+2. **Exploratory Data Analysis (EDA)** — Comprehensive visualizations:
+   - Pie charts, violin plots, box plots
+   - Count plots, histograms
+   - Model comparison graphs
+   - Confusion matrices, correlation matrices
+3. **Model Training & Evaluation** — Four models compared:
+   - Naive Bayes
+   - XGBoost
+   - K-Nearest Neighbors (KNN) ← **Best performer**
+   - Gradient Boosting Machine
+4. **Deployment** — Best model deployed via Streamlit web app
 
-5. **Inference**: 
-      Deployed the model with the help streamlit web application to predict the atttrition level of employee
+---
 
-## Libraries Used
+## 🛠️ Tech Stack
 
-1. **Joblib**: For downloading the KNN model
-2. **Scikit learn**: For machine learning processing  and operations
-3. **Matplotlib**: For plotting and visualizing the detection results.
-4. **Pandas**: For Data manipulation.
-5. **NumPy**: For efficient numerical operations.
-6. **Seaborn** : for advanced data visualizations
-7. **plotly** : for 3D data visualizations .
-8. **Streamlit** : for creating gui of the web application.
-9. **requests** : requests for creating Htttp requests
+| Component | Technology |
+|-----------|-----------|
+| **Language** | Python 3.9+ |
+| **ML Framework** | Scikit-learn |
+| **Web App** | Streamlit |
+| **Data Processing** | Pandas, NumPy |
+| **Visualization** | Matplotlib, Seaborn, Plotly |
+| **Model Serialization** | Joblib |
 
-## How to Use
+---
 
-1. **Clone the Repository**: 
-    ```sh
-    git clone url_to_this_repository
-    ```
+## 🚀 Getting Started
 
-2. **Install Dependencies**: 
-    ```sh
-    pip install -r requirements.txt
-    ```
+### Prerequisites
 
+- **Python 3.9+** installed
 
-3. **Run the Model**: 
-    ```python
-    streamlit run app.py
-    ```
+### Installation
 
-4. **View Results**:  The script will allow you to predict whether the employee is going to stay in the company or leave the company  based on various parametrs like work of experience, age , promoted in the past , position held, sector in which employee works , satisfaction level and average monthly hours the employee works in the company using machine learning models and result is outputted on the streamlit based application using python as shown in the demo.
+1. **Clone the repository**
 
-## Demo 
+   ```bash
+   git clone https://github.com/your-username/Employee_attrition_prediction_using_ML.git
+   cd Employee_attrition_prediction_using_ML
+   ```
 
+2. **Install dependencies**
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Run the Streamlit app**
+
+   ```bash
+   cd model
+   streamlit run app.py
+   ```
+
+4. **Open in browser** — Streamlit will automatically open at [http://localhost:8501](http://localhost:8501)
+
+---
+
+## 📖 Usage
+
+1. Fill in the employee details using the interactive form:
+   - Select gender, department, and job title
+   - Adjust sliders for age, years at company, satisfaction level, and monthly hours
+   - Indicate promotion history and enter salary
+2. Click **"Predict"**
+3. View the prediction result — whether the employee is likely to **leave** or **stay**
+
+---
+
+## 📁 Project Structure
+
+```
+Employee_attrition_prediction_using_ML/
+├── dataset/
+│   └── employee_attrition_data.csv       # Raw dataset
+├── images/                                # EDA visualizations
+├── model/
+│   ├── app.py                             # Streamlit web application
+│   ├── employee_attrition_prediction.ipynb # Full ML pipeline notebook
+│   └── knn_model.pkl                      # Trained KNN model
+├── webapp/
+│   └── webapp.mp4                         # Demo video
+├── requirements.txt                       # Python dependencies
+└── README.md
+```
+
+---
+
+## 🎬 Demo
 
 https://github.com/user-attachments/assets/d7f232d6-ac43-4075-8691-eba04b99a5d4
 
+---
+
+## 📜 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+## 🙋‍♀️ Author
+
+**Sujitha Kotyada** — [@sujitha-kotyada](https://github.com/sujitha-kotyada)
