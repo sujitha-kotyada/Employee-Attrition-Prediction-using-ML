@@ -85,7 +85,7 @@ A Streamlit web application for predicting employee attrition using a pre-traine
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/your-username/Employee_attrition_prediction_using_ML.git
+   git clone https://github.com/sujitha-kotyada/Employee_attrition_prediction_using_ML.git
    cd Employee_attrition_prediction_using_ML
    ```
 
